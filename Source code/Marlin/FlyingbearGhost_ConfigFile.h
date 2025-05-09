@@ -48,17 +48,18 @@ NANO13S_STOCK   -    MKS Robin Nano 1.3s - Driver 4x TMC2225
 
  #define FILAMENT_RUNOUT_SENSOR                               //<------- Enable or disable filament runout sensor
 
- #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 400 }   //<------- Define your step/mm
+ #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 82.47, 398.01, 410.75 }   //<------- Define your step/mm
 
  #define PIDTEMP                                               //<------- Define your PIDTEMP
-  #define DEFAULT_Kp  22.20
-  #define DEFAULT_Ki   1.08
-  #define DEFAULT_Kd 114.00
+  #define DEFAULT_Kp  12.01
+  #define DEFAULT_Ki   0.72
+  #define DEFAULT_Kd  50.20
   
  #define PIDTEMPBED                                           //<------- Define your PIDTEMPBED
-  #define DEFAULT_bedKp 10.00
-  #define DEFAULT_bedKi .023
-  #define DEFAULT_bedKd 305.4
+  #define DEFAULT_bedKp 28.84
+  #define DEFAULT_bedKi 5.08
+  #define DEFAULT_bedKd 109.19
+
 
   #define FBGHOST_BLTOUCH                                   //<------- Define if you have Bltouch or not
     #if ENABLED (FBGHOST_BLTOUCH)
@@ -66,15 +67,10 @@ NANO13S_STOCK   -    MKS Robin Nano 1.3s - Driver 4x TMC2225
     #endif
   
  //#define TFT_CLASSIC_UI
- #define TFT_COLOR_UI                                      //<------- Define your printer UI
- //#define TFT_LVGL_UI
+ //#define TFT_COLOR_UI                                      //<------- Define your printer UI
+ #define TFT_LVGL_UI
 
 #endif
-
-
-
-
-
 
 
 

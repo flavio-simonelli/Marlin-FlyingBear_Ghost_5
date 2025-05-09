@@ -646,9 +646,9 @@
  *   PWM on pin OC2A. Only use this option if you don't need PWM on 0C2A. (Check your schematic.)
  *   USE_OCR2A_AS_TOP sacrifices duty cycle control resolution to achieve this broader range of frequencies.
  */
-//#define FAST_PWM_FAN    // Increase the fan PWM frequency. Removes the PWM noise but increases heating in the FET/Arduino
+#define FAST_PWM_FAN    // Increase the fan PWM frequency. Removes the PWM noise but increases heating in the FET/Arduino
 #if ENABLED(FAST_PWM_FAN)
-  //#define FAST_PWM_FAN_FREQUENCY 31400  // Define here to override the defaults below
+  #define FAST_PWM_FAN_FREQUENCY 31400  // Define here to override the defaults below
   //#define USE_OCR2A_AS_TOP
   #ifndef FAST_PWM_FAN_FREQUENCY
     #ifdef __AVR__
@@ -2812,7 +2812,7 @@
                                                   //   Filament can be extruded repeatedly from the Filament Change menu
                                                   //   until extrusion is consistent, and to purge old filament.
   #define ADVANCED_PAUSE_RESUME_PRIME          0  // (mm) Extra distance to prime nozzle after returning from park.
-  //#define ADVANCED_PAUSE_FANS_PAUSE             // Turn off print-cooling fans while the machine is paused.
+  #define ADVANCED_PAUSE_FANS_PAUSE             // Turn off print-cooling fans while the machine is paused.
 
                                                   // Filament Unload does a Retract, Delay, and Purge first:
   #define FILAMENT_UNLOAD_PURGE_RETRACT       13  // (mm) Unload initial retract length.
